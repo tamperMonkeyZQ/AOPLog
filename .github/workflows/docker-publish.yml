@@ -33,6 +33,7 @@ jobs:
         env:
           IMAGE_TAG: ${{ github.sha }} # 用于标记容器版本号
         run: |
+          cd /home/runner/work/AOPLog/AOPLog
           java -jar ./target/AOPLog-0.0.1-SNAPSHOT.jar
           docker build -f Dockerfile -t registry.cn-hangzhou.aliyuncs.com/cube_docker/cicd:1.1 .
           docker push registry.cn-hangzhou.aliyuncs.com/cube_docker/cicd:1.1

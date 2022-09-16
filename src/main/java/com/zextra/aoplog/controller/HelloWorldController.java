@@ -9,6 +9,6 @@ public class HelloWorldController {
     @ResponseBody
     @GetMapping("/index")
     public String index() {
-        return "hello world.....";
+        return "你好世界";
     }
 }

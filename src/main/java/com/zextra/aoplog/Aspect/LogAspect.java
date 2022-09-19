@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.lang.Thread.sleep;
+
 @Aspect
 @Component
 public class LogAspect {
@@ -15,6 +17,11 @@ public class LogAspect {
     public void beforeAdvice(JoinPoint point){
         String methodName = point.getSignature().getName();
         List<Object> args = Arrays.asList(point.getArgs());
+        try {
+            sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println("@Before 前置通知 : 方法名 【 " + methodName + " 】and args are " + args);
     }
 }

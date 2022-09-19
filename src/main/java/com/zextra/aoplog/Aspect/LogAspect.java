@@ -23,5 +23,6 @@ public class LogAspect {
             throw new RuntimeException(e);
         }
         System.out.println("@Before 前置通知 : 方法名 【 " + methodName + " 】and args are " + args);
+        System.out.println("cicd");
     }
 }

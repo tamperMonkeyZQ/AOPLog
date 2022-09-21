@@ -18,11 +18,10 @@ public class LogAspect {
         String methodName = point.getSignature().getName();
         List<Object> args = Arrays.asList(point.getArgs());
         try {
-            sleep(3000);
+            sleep(30000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         System.out.println("@Before 前置通知 : 方法名 【 " + methodName + " 】and args are " + args);
-        System.out.println("cicd");
     }
 }

@@ -9,6 +9,6 @@ public class HelloWorldController {
     @ResponseBody
     @GetMapping("/index")
     public String index() {
-        return "Zextra-cicd";
+        return "Zextra";
     }
 }

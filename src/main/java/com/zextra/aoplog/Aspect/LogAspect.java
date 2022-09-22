@@ -22,6 +22,6 @@ public class LogAspect {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("@Before 前置通知 : 方法名 【 " + methodName + " 】and args are " + args);
+        System.out.println("@Before 前置通知 : 方法名: 【 " + methodName + " 】and args are " + args);
     }
 }

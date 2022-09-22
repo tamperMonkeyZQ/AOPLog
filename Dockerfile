@@ -1,8 +1,5 @@
-FROM maven:3.6.2-jdk-11
-RUN mkdir /usr/local/work \
-    && cd /usr/local/work \
-    && git clone https://github.com/tamperMonkeyZQ/AOPLog.git \
-    && cd AOPLog/ \
+FROM registry.cn-beijing.aliyuncs.com/cube_docker/cicd:base
+RUN cd /usr/local/work/AOPLog/ \
+    && git pull/ \
     && mvn clean package \
-    && mkdir /usr/local/java \
     && cp ./target/AOPLog-0.0.1-SNAPSHOT.jar /usr/local/java/ \
